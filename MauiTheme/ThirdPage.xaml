@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<b:BaseContentPage
+    x:Class="MauiTheme.ThirdPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:b="clr-namespace:MauiTheme"
+    xmlns:vm="clr-namespace:MauiTheme.ViewModel"
+    Title="ThirdPage"
+    x:DataType="vm:ThirdViewModel">
+    <VerticalStackLayout>
+        <Grid
+            Margin="0,10,0,0"
+            ColumnDefinitions="*,*"
+            RowDefinitions="Auto, Auto, Auto, Auto"
+            RowSpacing="15">
+            <Label
+                Grid.Row="0"
+                Grid.Column="0"
+                Style="{StaticResource mediumLabelStyle}"
+                Text="row 1 col 1" />
+
+            <Label
+                Grid.Row="0"
+                Grid.Column="1"
+                Style="{StaticResource bigLabelSmaller}"
+                Text="row 1 col 2" />
+
+            <Label
+                Grid.Row="1"
+                Grid.Column="0"
+                Style="{StaticResource mediumLabelStyle}"
+                Text="row 2 col 1" />
+
+            <Label
+                Grid.Row="1"
+                Grid.Column="1"
+                Style="{StaticResource bigLabelSmaller}"
+                Text="row 2 col 2" />
+        </Grid>
+    </VerticalStackLayout>
+</b:BaseContentPage>
