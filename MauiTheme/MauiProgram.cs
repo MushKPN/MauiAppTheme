@@ -2,7 +2,6 @@
 using MauiTheme.Navigation;
 using MauiTheme.ViewModel;
 using Microsoft.Extensions.Logging;
-using Microsoft.Maui.Hosting;
 
 namespace MauiTheme;
 

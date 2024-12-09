@@ -9,7 +9,7 @@ public sealed class NavigationService : INavigationService
     #endregion
 
     #region Methods
-    public async Task NavigateToAsync(string route, IDictionary<string, object> routeParameters = null)
+    public async Task NavigateToAsync(string route, IDictionary<string, object>? routeParameters = null)
     {
         try
         {
@@ -25,7 +25,7 @@ public sealed class NavigationService : INavigationService
                 }
             });
         }
-        catch (Exception ex)
+        catch (Exception)
         {
             //log error
         }
@@ -38,7 +38,7 @@ public sealed class NavigationService : INavigationService
 
     public void CloseApplication()
     {
-        Application.Current.Quit();
+        Application.Current?.Quit();
     }
     #endregion
 }

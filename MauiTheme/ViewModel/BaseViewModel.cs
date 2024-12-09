@@ -23,7 +23,9 @@ public partial class BaseViewModel : ObservableObject
     #endregion
 
     #region Methods
+#pragma warning disable CS1998 // Cette méthode async n'a pas d'opérateur 'await' et elle s'exécutera de façon synchrone
     public virtual async Task InitViewAsync()
+#pragma warning restore CS1998 // Cette méthode async n'a pas d'opérateur 'await' et elle s'exécutera de façon synchrone
     {
         //Méthode virtuelle dédiée au chargement asynchrone des écrans (overridée de manière spécifique sur chaque enfant)
     }

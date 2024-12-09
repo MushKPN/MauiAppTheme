@@ -14,7 +14,7 @@ public partial class MainPageViewModel : BaseViewModel
     }
 
     [RelayCommand]
-    private async void ChangeAppTheme()
+    private async Task ChangeAppTheme()
     {
         try
         {
@@ -41,7 +41,7 @@ public partial class MainPageViewModel : BaseViewModel
     }
 
     [RelayCommand]
-    private async Task ExitApp()
+    private void ExitApp()
     {
         navigationService.CloseApplication();
     }
