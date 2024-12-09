@@ -2,6 +2,7 @@
 using MauiTheme.Navigation;
 using MauiTheme.ViewModel;
 using Microsoft.Extensions.Logging;
+using Telerik.Maui.Controls.Compatibility;
 
 namespace MauiTheme;
 
@@ -12,6 +13,7 @@ public static class MauiProgram
         MauiAppBuilder builder = MauiApp.CreateBuilder();
         builder
             .UseMauiApp<App>()
+            .UseTelerik()
             .UseMauiCommunityToolkitCore()
             .ConfigureFonts(fonts =>
             {

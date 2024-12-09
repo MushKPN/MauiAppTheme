@@ -4,6 +4,7 @@
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:b="clr-namespace:MauiTheme"
+    xmlns:t="http://schemas.telerik.com/2022/xaml/maui"
     xmlns:vm="clr-namespace:MauiTheme.ViewModel"
     Title="ThirdPage"
     x:DataType="vm:ThirdViewModel">
@@ -11,28 +12,33 @@
         <Grid
             Margin="0,10,0,0"
             ColumnDefinitions="*,*"
-            RowDefinitions="Auto, Auto, Auto, Auto"
+            RowDefinitions="Auto, Auto, Auto, Auto, Auto"
             RowSpacing="15">
+            <t:RadDataGrid
+                x:Name="dataGrid"
+                Grid.ColumnSpan="2" ItemsSource="{Binding MyItems}">
+            </t:RadDataGrid>
+
             <Label
-                Grid.Row="0"
+                Grid.Row="1"
                 Grid.Column="0"
                 Style="{StaticResource mediumLabelStyle}"
                 Text="row 1 col 1" />
 
             <Label
-                Grid.Row="0"
+                Grid.Row="1"
                 Grid.Column="1"
                 Style="{StaticResource bigLabelSmaller}"
                 Text="row 1 col 2" />
 
             <Label
-                Grid.Row="1"
+                Grid.Row="2"
                 Grid.Column="0"
                 Style="{StaticResource mediumLabelStyle}"
                 Text="row 2 col 1" />
 
             <Label
-                Grid.Row="1"
+                Grid.Row="2"
                 Grid.Column="1"
                 Style="{StaticResource bigLabelSmaller}"
                 Text="row 2 col 2" />

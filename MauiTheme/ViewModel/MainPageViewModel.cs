@@ -10,7 +10,7 @@ public partial class MainPageViewModel : BaseViewModel
 
     public MainPageViewModel(IServiceProvider provider) : base(provider)
     {
-        IsDarkTheme = Application.Current.RequestedTheme == AppTheme.Dark;
+        IsDarkTheme = Application.Current!.RequestedTheme == AppTheme.Dark;
     }
 
     [RelayCommand]
@@ -19,7 +19,7 @@ public partial class MainPageViewModel : BaseViewModel
         try
         {
             IsLoading = true;
-            Application.Current.UserAppTheme = IsDarkTheme ? AppTheme.Light : AppTheme.Dark;
+            Application.Current!.UserAppTheme = IsDarkTheme ? AppTheme.Light : AppTheme.Dark;
             IsDarkTheme = !IsDarkTheme;
 
             await Task.Delay(2000); //Simulate long running task
